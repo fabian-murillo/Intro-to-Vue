@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Intro to Vue</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    <!-- The div below is our entry point for our Vue instance -->
+        <div id="app">
+            <h1>{{ product }}</h1> <!-- Double curly braces = interpolated expression -->
+            <!-- When Vue sees the expression, it recognizes the reference to the associated 
+                Vue instance, and replaces the expression with the value of the 'product' property
+                found in the data object, which itself, is a property of the options obj passed
+                to this particular instance of Vue -->
+            <p>{{ description }}</p>
+        </div>
+
+
+        <script src="https://unpkg.com/vue"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
