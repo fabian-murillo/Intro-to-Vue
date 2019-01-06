@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Intro to Vue</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div class="product">
+            <div class="product-image">
+                <img v-bind:src="image" v-bind:alt="altText"/>  <!-- bind the value of 'image' in our data obj 
+                    (passed to our Vue instance), to the src attribute on our img tag, using the v-bind directive -->
+            </div>
+
+            <div class="product-info">
+                <h1>{{ product }}</h1>
+            </div>
+        </div>
+        <div class="link">
+            <!-- example of shorthand binding data -->
+            <a :href="link">This links to Vue Mastery</a> 
+        </div>
+    </div>    
+</body>
+    <script src="https://unpkg.com/vue"></script>  
+    <script src="main.js"></script>
+</html>
