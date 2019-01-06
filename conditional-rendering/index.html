@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Intro to Vue</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+    <body>
+        <div id="app">
+            <div class="product">
+                <div class="product-image">
+                    <img :src="image"/>
+                </div>
+                <div class="product-info">
+                    <h1>{{ product }}</h1>
+                </div>  
+                <!-- Using Vue if/else conditional binding to determine which el to render: -->
+                <p v-if="inStock > 10">In Stock</p>
+                <!-- Using inventory property in an expression, to determine rendering: -->
+                <p v-else-if="inventory > 0 && inventory < 10">Almost sold out!</p>
+                <p v-else>Out of Stock</p>  
+                <!-- v-show can be used to toggle the css "display"
+                property of an element, this is more performant
+                than inserting and removing an el entirely with if/else -->
+                <span v-show="onSale">On Sale!</span>    
+                  
+            </div>
+        </div>
+
+        <script src="https://unpkg.com/vue"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
